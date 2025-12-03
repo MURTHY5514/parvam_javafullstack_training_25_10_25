@@ -1,0 +1,254 @@
+1. Encapsulation – Student Report Card System
+=============================================
+Problem:
+	Create a class Student where all data must be protected so that no one can modify it directly.
+
+Requirements:
+	Private fields: name, rollNumber, marks
+
+	Provide public getters/setters
+
+	When setting marks, ensure:
+
+	Marks must be between 0 and 100
+
+	If invalid, print: "Invalid Marks"
+
+	Add a method printDetails() to show all student details
+
+2. Inheritance – College Member System
+======================================
+Problem:
+	A college has Teachers and Students, and both share common details.
+
+Requirements:
+	Base class: Person
+
+	Fields: name, age
+
+	Methods: showBasicDetails()
+
+	Class 1: Student extends Person
+
+	Fields: rollNumber, course
+
+	Method: showStudentDetails()
+
+	Class 2: Teacher extends Person
+
+	Fields: employeeId, subject
+
+	Method: showTeacherDetails()
+
+Task:
+	Create one Student object and one Teacher object
+
+	Call all methods and observe inheritance
+
+
+3. Method Overloading – Math Helper Utility
+===========================================
+Problem:
+	You must create a Math utility class that supports different types of addition.
+
+Requirements:
+	Create class MathHelper with overloaded add() methods:
+
+	add(int a, int b)
+
+	add(double a, double b)
+
+	add(int a, int b, int c)
+
+Task:
+	Create object → call all versions
+
+	Print results
+
+
+4. Method Overriding – Animal Sound Program
+===========================================
+Problem:
+	Different animals make different sounds.
+	Use overriding to show this.
+
+Requirements:
+	Base Class: Animal
+
+	Method: sound() → print "Animal makes sound"
+
+	Subclasses:
+
+	Dog → print "Dog barks"
+
+	Cat → print "Cat meows"
+
+	Cow → print "Cow moos"
+
+Task:
+	Create an array Animal[] animals = {new Dog(), new Cat(), new Cow()}
+
+	Loop and call sound() on each
+
+5. Abstraction Using Abstract Class – Online Payment System
+===========================================================
+Problem:
+	You must design different payment methods but keep a common rule.
+
+Requirements:
+
+	Abstract Class: Payment
+
+	abstract method: pay(double amount)
+
+	normal method: displayMessage()
+
+	Subclasses:
+
+	CreditCardPayment → print "Paid using Credit Card"
+
+	UPIPayment → print "Paid using UPI"
+
+Task:
+
+	Use Payment reference pointing to different child objects
+	Example: Payment p = new CreditCardPayment();
+
+	Call pay(5000)
+
+
+6. Interface – Music Player
+===========================
+Problem:
+	Create a music player system where various instruments can be played.
+
+Requirements:
+
+	Interface: Playable
+
+	method: play()
+
+	Classes:
+
+	Guitar → "Playing Guitar"
+
+	Piano → "Playing Piano"
+
+	Drum → "Playing Drum"
+
+Task:
+
+	Create objects of all instruments
+
+	Call play()
+
+7. super Keyword – Parent → Child Construction
+==============================================
+Problem:
+	Understand how parent constructor gets called before child.
+
+Requirements:
+	Parent Class: Vehicle
+
+	Constructor → print "Vehicle is created"
+
+	Child Class: Car
+
+	Constructor → print "Car is created"
+	Use super() to call parent
+
+Task:
+	Create Car object and observe output order
+
+
+8. this Keyword – Variable Confusion Problem
+============================================
+Problem:
+	Sometimes parameter names and instance variable names are the same.
+
+Requirement:
+	Create Employee class with field: salary
+	Constructor: Employee(int salary)
+
+	Inside constructor use:
+
+	this.salary = salary;
+
+
+Task:
+	Create object and print salary
+
+
+9. Constructor Chaining – Car Info System
+=========================================
+Problem:
+	Create 3 constructors for Car class.
+
+Requirements:
+	Constructor 1: no args → "Basic Car"
+	Constructor 2: one arg (model)
+	Constructor 3: two args (model, price)
+
+	Use this() to chain all constructors.
+
+Task:
+
+	Create an object with 2 arguments
+
+	Observe constructor order
+
+10. Has-A Relationship – Student Has Address
+============================================
+Problem:
+	A student has an address.
+	Use composition.
+
+	Class Address
+
+	Fields: street, city, pincode
+
+	Class Student
+
+	Fields: name, roll
+	Field: Address address
+	Constructor should take an Address object
+
+Task:
+	Create Address object
+
+	Pass it to Student
+
+	Print full details
+
+11. Static Keyword – Count Number of Objects
+============================================
+Problem:
+	Every time an object is created, a counter should increase.
+
+Requirements:
+	Class Counter
+
+	Static variable: count
+
+	Increment it inside constructor
+
+	Make method showCount()
+
+Task:
+
+	Create 3 objects
+
+	Print the count
+
+12. final Keyword – Prevent Modification
+========================================
+Problem:
+	Create a class where values should not change.
+
+Requirements:
+
+	final variable: PI = 3.14
+
+	final method display() that prints PI
+
+	Try to override (should give error)
